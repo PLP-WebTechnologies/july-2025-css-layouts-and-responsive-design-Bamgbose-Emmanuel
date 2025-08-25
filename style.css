@@ -1,0 +1,120 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: #333;
+}
+
+/* Header */
+.header {
+  background: #4CAF50;
+  color: white;
+  padding: 1rem;
+  text-align: center;
+}
+
+/* Navbar using Flexbox */
+.navbar {
+  background: #333;
+}
+
+.navbar ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  flex-wrap: wrap;
+}
+
+.navbar li {
+  margin: 0.5rem;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: white;
+  padding: 0.5rem 1rem;
+  display: block;
+}
+
+.navbar a:hover {
+  background: #4CAF50;
+  border-radius: 5px;
+}
+
+/* Main Container using Grid */
+.container {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+/* Content */
+.content {
+  background: #f9f9f9;
+  padding: 1rem;
+  border-radius: 5px;
+}
+
+/* Cards using Flexbox */
+.cards {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+  flex-wrap: wrap;
+}
+
+.card {
+  flex: 1 1 150px;
+  background: #eee;
+  padding: 1rem;
+  text-align: center;
+  border-radius: 5px;
+}
+
+/* Sidebar */
+.sidebar {
+  background: #f0f0f0;
+  padding: 1rem;
+  border-radius: 5px;
+}
+
+/* Footer */
+.footer {
+  background: #333;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 1rem;
+}
+
+/* Media Queries for Responsiveness */
+
+/* Tablet (≤ 768px) */
+@media (max-width: 768px) {
+  .container {
+    grid-template-columns: 2fr 1fr;
+  }
+  .navbar ul {
+    justify-content: space-around;
+  }
+}
+
+/* Mobile (≤ 480px) */
+@media (max-width: 480px) {
+  .container {
+    grid-template-columns: 1fr;
+  }
+  .sidebar {
+    order: -1; /* Sidebar comes before main content */
+  }
+  .cards {
+    flex-direction: column;
+  }
+}
